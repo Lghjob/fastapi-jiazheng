@@ -66,7 +66,7 @@ venv\Scripts\activate
 # 安装依赖
 pip install -r requirements.txt
 3. 配置数据库连接
-修改 config/database.py 中的数据库连接字符串（URL），配置您本地的 MySQL/SQLite 数据库信息：
+修改 config/database.py 中的数据库连接字符串（URL）或者新建.env文件创建数据库链接字符串，具体可参考.env.example，配置您本地的 MySQL/SQLite 数据库信息：
 
 Python
 DATABASE_URL = "mysql+pymysql://user:password@localhost:3306/db_name"
