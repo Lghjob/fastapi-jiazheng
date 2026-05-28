@@ -15,6 +15,7 @@ import uvicorn
 import os
 import logging
 from pathlib import Path
+from dotenv import load_dotenv
 # 导入异常处理器
 from utils.exceptions.exception_handler import service_exception_handler,global_exception_handler,validation_exception_handler
 # 日志配置
@@ -56,7 +57,8 @@ from controllers.user_controller import router as user_router
 from fastapi.openapi.utils import get_openapi
 # 初始化异步调度器（全局定义）
 scheduler = AsyncIOScheduler()
-
+#激活加载.env文件
+load_dotenv()
 #===================== 系统生命周期事件 =====================
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -113,12 +115,12 @@ scheduler.add_job(
 )
 
 # 创建应用实例
+IS_DEBUG = os.getenv("DEBUG", "True") == "True"
 app = FastAPI(
     title="家务智能推送系统 API",
     lifespan=lifespan,
-    # debug=True
+    debug=IS_DEBUG
 )
-from fastapi.exceptions import RequestValidationError
 
 app.add_exception_handler(ServiceException, service_exception_handler) # type: ignore
 app.add_exception_handler(RequestValidationError, validation_exception_handler) # type: ignore
@@ -203,4 +205,7 @@ app.include_router(api_router)
 
 #===================== 启动项目 =====================
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    HOST = os.getenv("SERVER_HOST", "127.0.0.1")
+    PORT = int(os.getenv("SERVER_PORT", 8000))     
+    RELOAD = os.getenv("DEBUG", "True") == "True"
+    uvicorn.run("main:app", host=HOST, port=PORT, reload=RELOAD)
