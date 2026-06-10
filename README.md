@@ -79,3 +79,6 @@ uvicorn main:app --reload
 
 # 📄 开源协议
 本项目基于 MIT License 协议开源。
+
+# 如需相应前端源码或其他问题可联系邮箱 
+邮箱地址：lghwork163@163.com
