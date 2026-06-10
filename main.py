@@ -96,7 +96,7 @@ async def lifespan(app: FastAPI):
 async def daily_update_staff_order_task():
     """
     每天凌晨 1 点执行
-    【Docker环境注释掉，避免连接本地MySQL失败】
+    Docker环境需要注释掉，避免连接本地MySQL失败
     """
     log.info("⏰ 开始执行每日定时任务：更新家政人员订单数量...")
     db = next(get_db())
