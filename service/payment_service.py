@@ -4,7 +4,6 @@ from typing import Optional
 from datetime import datetime
 from sqlalchemy.orm import Session
 
-# 导入你项目已有的文件（直接用你写的，不用改）
 from schemas.service_order import ServiceOrder
 from utils.exceptions.service_exception import ServiceException
 from utils.enums.order_status import OrderStatus
@@ -34,14 +33,12 @@ class PaymentService:
                 raise ServiceException("订单不存在")
 
             # 2. 检查订单状态（必须是待支付）
-            # 适配你现有的枚举类：get_value() 是方法，带括号
             if order.order_status != OrderStatus.WAITING_PAY.get_value():
                 status_enum = OrderStatus.get_by_value(order.order_status)
                 status_desc = status_enum.get_desc() if status_enum else "未知"
                 raise ServiceException(f"订单状态不正确，当前状态：{status_desc}")
 
             # 3. 验证支付方式
-            # 适配你现有的枚举类：get_by_code() 是方法
             method = PaymentMethod.get_by_code(payment_method)
             if not method:
                 raise ServiceException("不支持的支付方式")
@@ -82,7 +79,6 @@ class PaymentService:
             if not order:
                 raise ServiceException("订单不存在")
 
-            # 适配你现有的枚举类：get_value() 带括号
             if order.order_status != OrderStatus.WAITING_PAY.get_value():
                 raise ServiceException("只能取消待支付的订单")
 

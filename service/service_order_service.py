@@ -4,7 +4,6 @@ from datetime import datetime, timedelta
 from sqlalchemy.orm import Session
 from sqlalchemy import  desc, not_, text
 
-# 导入你项目已有的文件
 from schemas.service_order import ServiceOrder
 from schemas.user import User
 from schemas.service_staff import ServiceStaff
@@ -150,7 +149,6 @@ class ServiceOrderService:
             # 如果订单状态变更为已完成，更新家政人员的订单数量和完成率
             if status == OrderStatus.COMPLETED.get_value():
                 try:
-                    # 这里假设你有 StaffService，我先注释掉，你可以根据实际情况取消注释
                     # from service.service_staff_service import ServiceStaffService
                     # staff_service = ServiceStaffService(self.db)
                     # staff_service.update_service_staff_orders(order.staff_id)
@@ -371,7 +369,7 @@ class ServiceOrderService:
 
             # 订单取消时，更新家政人员的完成率
             try:
-                # 这里假设你有 StaffService，我先注释掉，你可以根据实际情况取消注释
+
                 # from service.service_staff_service import ServiceStaffService
                 # staff_service = ServiceStaffService(self.db)
                 # staff_service.update_service_staff_orders(order.staff_id)

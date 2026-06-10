@@ -53,7 +53,6 @@ class OrderRefund(BaseSchema):
     is_deleted: Optional[int] = None
 
     # ===================== 关联信息（非数据库字段）占位 =====================
-    # 等你迁移完 ServiceOrder 和 User  后，把下面的 Any 替换成对应类名
     order: Optional[ServiceOrder] = None
     user: Optional[User] = None
     audit_user: Optional[User] = None  

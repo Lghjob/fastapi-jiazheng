@@ -5,7 +5,7 @@ from decimal import Decimal, ROUND_HALF_UP
 from sqlalchemy.orm import Session
 from sqlalchemy import desc
 
-# Schema（使用你提供的 ServiceReview）
+# Schema
 from schemas.service_review import ServiceReview
 from schemas.user import User
 from schemas.service_staff import ServiceStaff

@@ -91,7 +91,6 @@ class ServiceOrder(BaseSchema):
     is_deleted: Optional[int] = None
 
     # ===================== 关联信息（非数据库字段） =====================
-    # 等你迁移完 后，把下面的 Any 替换成具体类名
     user: Optional[Any] = None  
     staff: Optional[Any] = None 
     service_item: Optional[ServiceItem] = None  # 已迁移 ServiceItem，直接使用

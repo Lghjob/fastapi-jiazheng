@@ -3,7 +3,6 @@ import os
 from typing import List, Optional
 from fastapi import UploadFile
 
-# 导入你项目已有的文件（直接用你写的，不用改）
 from utils.result import Result
 from utils.enums.file_type import FileType
 from utils.file_util import FileUtil
@@ -22,7 +21,7 @@ class FileService:
             return Result.error_code("-1", "文件不存在！")
 
         logger.info(f"upload FILE: {file.filename}")
-        # 调用你现有的 FileUtil.save_file
+        # 调用现有的 FileUtil.save_file
         path = FileUtil.save_file(file, None, file_type.get_type_name())
 
         if path:

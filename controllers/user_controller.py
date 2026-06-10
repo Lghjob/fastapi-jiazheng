@@ -38,7 +38,7 @@ def login(
 # ===================== 3. 更新用户信息 =====================
 @router.put("/info", summary="更新用户信息")
 def update_user_info(
-    user_update: UserUpdate = Body(...),  # 用你的新DTO
+    user_update: UserUpdate = Body(...), 
     db = Depends(get_db)
 ):
     

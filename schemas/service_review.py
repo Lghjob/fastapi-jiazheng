@@ -71,7 +71,6 @@ class ServiceReview(BaseSchema):
     update_time: Optional[datetime] = None
 
     # ===================== 关联信息（非数据库字段） =====================
-    # 等你迁移完 后，把下面的 Any 替换成具体类名
     user: Optional[Any] = None  
     staff: Optional[Any] = None 
     order: Optional[ServiceOrder] = None  

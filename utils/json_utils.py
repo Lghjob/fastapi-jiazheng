@@ -1,7 +1,7 @@
 import json
 import logging
 from typing import List, Type, TypeVar, Any
-# 只有当你手动处理 JSON 字符串（比如从别的系统接数据、读文件、读 Redis）时，才使用你的 JsonUtils
+
 LOGGER = logging.getLogger("JsonUtils")
 
 T = TypeVar("T")

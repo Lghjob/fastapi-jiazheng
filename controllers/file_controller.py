@@ -1,7 +1,6 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 from typing import List
 from utils.result import Result
-# 从你的项目导入依赖
 from config.database import  get_db
 from utils.enums.file_type import FileType
 from service.file_service import FileService

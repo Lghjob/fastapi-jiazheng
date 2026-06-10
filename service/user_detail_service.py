@@ -2,7 +2,7 @@ import logging
 from typing import Optional
 from sqlalchemy.orm import Session
 
-# 导入你项目已有的文件
+
 from schemas.user import User
 from utils.exceptions.service_exception import ServiceException
 

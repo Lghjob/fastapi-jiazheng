@@ -5,10 +5,10 @@ from sqlalchemy import desc, asc
 
 from schemas.banner import Banner
 
-# 自定义异常（你已有的，不用动）
+# 自定义异常
 from utils.exceptions.service_exception import ServiceException
 
-# SQLAlchemy 模型（我等下给你生成）
+# SQLAlchemy 模型
 from models.banner_model import BannerModel
 
 # 日志

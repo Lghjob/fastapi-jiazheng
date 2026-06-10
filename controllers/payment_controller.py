@@ -1,6 +1,5 @@
 from fastapi import APIRouter, Path, Query, Depends
 from utils.result import Result
-# 适配你的项目导入
 from config.database import  get_db
 from service.payment_service import PaymentService
 

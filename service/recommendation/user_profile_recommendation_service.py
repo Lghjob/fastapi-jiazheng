@@ -4,7 +4,7 @@ from decimal import Decimal
 from sqlalchemy.orm import Session
 # from sqlalchemy import and_, or_, desc, asc, in_
 
-# 导入你项目已有的文件
+
 from schemas.user import User
 from schemas.service_item import ServiceItem
 from schemas.service_order import ServiceOrder
