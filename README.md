@@ -78,7 +78,8 @@ uvicorn main:app --reload
 服务启动后，可直接访问 http://127.0.0.1:8000/docs 查阅自动生成的交互式 Swagger API 文档。
 
 # 📄 开源协议
-本项目基于 MIT License 协议开源。
+本项目基于 MIT License 协议开源，可自由学习、使用、修改和二次开发，请勿用于商业侵权用途。
+
 
 # 如需相应前端源码或其他问题可联系邮箱 
 邮箱地址：lghwork163@163.com

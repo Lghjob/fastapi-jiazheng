@@ -1,5 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime, BigInteger
-from datetime import datetime
+from sqlalchemy import Column, Integer, String, BigInteger
 from config.database import BaseModel,TimestampMixin
 
 class BannerModel(BaseModel,TimestampMixin):
