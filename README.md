@@ -1,5 +1,5 @@
 Markdown
-# 家务服务智能推送系统 - 高性能异步后端 API
+# 服务智能推荐系统 - 高性能异步后端 API
 # Housework Service Intelligent Push System (Backend)
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -7,7 +7,7 @@ Markdown
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## 📌 项目简介
-本项目是一款基于 **FastAPI** 异步高并发框架重构的企业级家务智能推送系统后端。系统采用前后端分离架构，针对原有传统架构进行了全面的 Python 化高性能重写。核心业务涵盖家政服务类目管理、多角色权限认证、订单交易流转以及多种智能推荐算法，专为高频家务服务匹配场景设计。
+本项目是一款基于 **FastAPI** 异步高并发框架重构的企业级智能推送系统后端。系统采用前后端分离架构，针对原有传统架构进行了全面的 Python 化高性能重写。核心业务涵盖服务类目管理、多角色权限认证、订单交易流转以及多种智能推荐算法，专为高频服务匹配场景设计。
 
 > **项目定位**：标准三层架构（MVC 变种）的分布式后端 API，具备严格的数据校验、完备的异常处理机制以及标准的代码组织规范。
 >
